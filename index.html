@@ -50,9 +50,10 @@
 
     async function shareMsg() {
       await liff.shareTargetPicker([
-        "type": "text",
-        "text": "This Message was send by ShareTargetPicker"
-      
+        {
+          type: "text",
+          text: "Hello, World!"
+        }
       ])
     }
 
@@ -90,11 +91,11 @@
 
     async function sendMsg() {
       if(liff.getContext().type !== "none"){
-        await liff.sendMassages([
+        await liff.sendMessages([
           {
-            "type": "sticker",
-            "stickerId": 1,
-            "packageId": 1
+            type: "sticker",
+            stickerId: 1,
+            packageId: 1
           }
         ]) 
         alert("Message send")
