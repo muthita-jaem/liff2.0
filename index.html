@@ -49,6 +49,11 @@
     }
 
     async function shareMsg() {
+      await liff.shareTargetPicker([
+        "type": "text",
+        "text": "This Message was send by ShareTargetPicker"
+      
+      ])
     }
 
     function logOut() {
